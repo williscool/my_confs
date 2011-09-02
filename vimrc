@@ -1,3 +1,6 @@
+""Updated based on
+""http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -9,7 +12,7 @@ if has("gui_running")
    "Terminus is AWESOME
    set guifont=Terminus\ 9
 else
-   colorscheme pablo
+   colorscheme desert
     set smartindent
     set tabstop=4
     set shiftwidth=4
