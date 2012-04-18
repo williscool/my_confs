@@ -1,18 +1,28 @@
+set nocompatible                " choose no compatibility with legacy vi
 ""Updated based on
 ""http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
 syntax enable
 filetype plugin indent on
 colorscheme desert
+
+"" Whitespace
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set ic
-set smartcase
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+
+"" Searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+
 
 au BufNewFile,BufRead *.html.erb set syntax=eruby
 
