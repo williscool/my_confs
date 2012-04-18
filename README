@@ -1,1 +1,11 @@
 my vim confs and such so I can get to them easily
+
+The files are kept unhidden (that is without dots in front of their names) to make them easier to open for editing
+
+to use:
+
+  ln -s a/file/in/this/repo/filename ~/proper/place/on/system/.filename
+
+example:
+  ln -s vimrc ~/.vimrc
+
