@@ -2,9 +2,8 @@ set nocompatible                " choose no compatibility with legacy vi
 ""Updated based on
 ""http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 syntax enable
 filetype plugin indent on
