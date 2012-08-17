@@ -1,14 +1,17 @@
 my vim confs and such so I can get to them easily
 
-The files are kept unhidden (that is without dots in front of their names) to make them easier to open for editing
+The files are kept unhidden (that is without dots in front of their names) to make them easier to find on the filesystem
 
 ## FIRST
 vim wont find the plugins properly if you dont put them where it can. i.e.
   ln -s ~/repo/folder/name ~/.vim
+
+example:
+   ln -s ~/my_confs/vimfiles/bundles ~/.vim/bundles
 
 to use a file: 
   ln -s a/file/in/this/repo/filename ~/proper/place/on/system/.filename
 
 example:
   ln -s vimrc ~/.vimrc
-
+  ln -s ~/my_confs/vimfiles/mvim /usr/local/bin/mvim
