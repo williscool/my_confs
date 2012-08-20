@@ -8,6 +8,8 @@ vim wont find the plugins properly if you dont put them where it can. i.e.
 
 example:
    ln -s ~/my_confs/vimfiles/bundles ~/.vim/bundles
+ 
+## Installations
 
 to use a file: 
   ln -s a/file/in/this/repo/filename ~/proper/place/on/system/.filename
@@ -15,3 +17,10 @@ to use a file:
 example:
   ln -s vimrc ~/.vimrc
   ln -s ~/my_confs/vimfiles/mvim /usr/local/bin/mvim
+
+## updating this repo
+# say if a person was kind enough to have their plugin in a git repo. since we are using pathogen we can simply do
+  
+  git submodule add git@github.com:flazz/vim-colorschemes.git vimfiles/bundle/colorschemes
+
+in the top level directory for instance and add that repo to the fun

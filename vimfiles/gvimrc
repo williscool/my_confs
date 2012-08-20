@@ -7,5 +7,5 @@ if &background == "dark"
     set transp=8
 endif
 
-color pablo
+color darkerdesert
 
