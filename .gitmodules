@@ -16,3 +16,9 @@
 [submodule "vimfiles/bundle/colorschemes"]
 	path = vimfiles/bundle/colorschemes
 	url = git@github.com:flazz/vim-colorschemes.git
+[submodule "vimfiles/bundle/vim-delimitMate"]
+	path = vimfiles/bundle/vim-delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
+[submodule "vimfiles/bundle/vim-supertab"]
+	path = vimfiles/bundle/vim-supertab
+	url = git://github.com/ervandew/supertab.git

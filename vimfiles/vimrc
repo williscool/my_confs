@@ -22,9 +22,35 @@ set showcmd                     " display incomplete commands
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+"ruby path
 let g:ruby_path = "/Users/williamh/.rvm/rubies/jruby-1.6.7/bin/ruby"
 
+"ruby syntax
 au BufNewFile,BufRead *.html.erb set syntax=eruby
+
+"help vim understand css files that get processed with other things as well
+autocmd BufNewFile,BufRead *.css*          set ft=css
+
+"""""" autocompletions and options {{{
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+set wildmenu
+
+
+"" make the autocompleters give you the longest list to chose from all the time
+
+set completeopt+=longest
+set wildmode=list:longest
+""""""""""""" }}}
+
+"auto add semicolon's in css
+autocmd FileType css inoremap : :;<Esc>i
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
