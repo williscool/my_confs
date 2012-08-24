@@ -7,3 +7,4 @@ if &background == "dark"
 endif
 
 color blackboard
+set guitablabel=%f

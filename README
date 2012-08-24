@@ -18,6 +18,13 @@ example:
   ln -s vimrc ~/.vimrc
   ln -s ~/my_confs/vimfiles/mvim /usr/local/bin/mvim
 
+!WARNING
+
+after making a symlink always visit the destination and use ls -all
+
+a)  to make sure the link was created correctly
+b) if the OS is being fucking retarded about making the correct link do a `pwd` and use the full path to make link
+
 ## updating this repo
 # say if a person was kind enough to have their plugin in a git repo. since we are using pathogen we can simply do
   
