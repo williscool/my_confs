@@ -22,3 +22,21 @@
 [submodule "vimfiles/bundle/vim-supertab"]
 	path = vimfiles/bundle/vim-supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "vimfiles/bundle/vim-colors-solarized"]
+	path = vimfiles/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vimfiles/bundle/vim-ragtag"]
+	path = vimfiles/bundle/vim-ragtag
+	url = git://github.com/tpope/vim-ragtag.git
+[submodule "vimfiles/bundle/vim-endwise"]
+	path = vimfiles/bundle/vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "vimfiles/bundle/vim-surround"]
+	path = vimfiles/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vimfiles/bundle/vim-railscasts-theme"]
+	path = vimfiles/bundle/vim-railscasts-theme
+	url = git://github.com/jpo/vim-railscasts-theme.git
+[submodule "vimfiles/bundle/vim-scss-syntax"]
+	path = vimfiles/bundle/vim-scss-syntax
+	url = git://github.com/cakebaker/scss-syntax.vim.git

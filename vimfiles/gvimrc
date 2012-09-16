@@ -1,10 +1,14 @@
 au VimEnter,BufWinEnter * NERDTreeFind
 
-set go-=T
-set bg=dark
-if &background == "dark"
-    set transp=8
-endif
+"colorscheme solarized
+colorscheme railscasts
 
-color blackboard
+set background=dark
+
+"set background to almost but not quite black
+hi Normal guibg=Grey2
+
 set guitablabel=%f
+
+nmap <C-Tab> :tabn<CR>
+nmap <C-S-Tab> :tabp<CR>

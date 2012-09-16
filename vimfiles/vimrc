@@ -4,6 +4,7 @@ set nocompatible                " choose no compatibility with legacy vi
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+call pathogen#helptags() " have pathogen update all help files  on load
 
 syntax enable
 filetype plugin indent on
@@ -31,11 +32,15 @@ au BufNewFile,BufRead *.html.erb set syntax=eruby
 "help vim understand css files that get processed with other things as well
 autocmd BufNewFile,BufRead *.css*          set ft=css
 
+"sass syntax
+au BufRead,BufNewFile *.scss* set filetype=scss
+
 """""" autocompletions and options {{{
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
@@ -50,7 +55,9 @@ set wildmode=list:longest
 """"""""""""" }}}
 
 "auto add semicolon's in css
-autocmd FileType css inoremap : :;<Esc>i
+autocmd FileType css inoremap <buffer> : :;<Esc>i
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
+
+let g:ragtag_global_maps = 1 
