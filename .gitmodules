@@ -40,3 +40,6 @@
 [submodule "vimfiles/bundle/vim-scss-syntax"]
 	path = vimfiles/bundle/vim-scss-syntax
 	url = git://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vimfiles/bundle/tabman"]
+	path = vimfiles/bundle/tabman
+	url = git://github.com/kien/tabman.vim.git

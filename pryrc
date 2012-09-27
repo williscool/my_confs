@@ -23,3 +23,7 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
     warn "[WARN] cannot load Rails console commands (Not on Rails2 or Rails3?)"
   end
 end
+
+if defined?(Rails) && Rails.env
+    extend Rails::ConsoleMethods
+end
