@@ -29,6 +29,6 @@ after making a symlink always visit the destination and use `ls -all`
 ## updating this repo
 say if a person was kind enough to have their plugin in a git repo. since we are using pathogen we can simply do
   
-    `git submodule add git@github.com:flazz/vim-colorschemes.git vimfiles/bundle/colorschemes`
+    git submodule add git@github.com:flazz/vim-colorschemes.git vimfiles/bundle/colorschemes
 
 in the top level directory for instance and add that repo to the fun
