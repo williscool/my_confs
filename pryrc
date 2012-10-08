@@ -1,6 +1,6 @@
 # write .pryrc
 # Load plugins (only those I whitelist)
-Pry.config.should_load_plugins = false
+#Pry.config.should_load_plugins = false
 Pry.plugins["doc"].activate!
 
 # Launch Pry with access to the entire Rails stack.

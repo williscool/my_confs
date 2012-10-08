@@ -61,3 +61,4 @@ autocmd FileType css inoremap <buffer> : :;<Esc>i
 nnoremap <CR> :noh<CR><CR>
 
 let g:ragtag_global_maps = 1 
+let g:ctrlp_extensions = ['tag']
