@@ -62,3 +62,31 @@ nnoremap <CR> :noh<CR><CR>
 
 let g:ragtag_global_maps = 1 
 let g:ctrlp_extensions = ['tag']
+
+
+" Get running OS
+function! GetRunningOS()
+  if has("win")
+    return "win"
+  endif
+  if has("unix")
+    if system('uname')=~'Darwin'
+      return "mac"
+    else
+      return "linux"
+    endif
+  endif
+endfunction
+
+let os=GetRunningOS()
+
+if os=="linux"
+  "make linux vim work with ctrl+v and ctrl+c
+  vmap <C-c> "+yi
+  vmap <C-x> "+c
+  vmap <C-v> c<ESC>"+p
+  imap <C-v> <C-r><C-o>+
+  
+  "get rid of graphical icons for header menu and use much better text one
+  se guioptions=agim
+endif
