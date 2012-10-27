@@ -81,6 +81,7 @@ endfunction
 let os=GetRunningOS()
 
 if os=="linux"
+  let g:netrw_home=$HOME . "/.vimfiles" "get rid of pesky .netrwhist file in our vim directory
   "make linux vim work with ctrl+v and ctrl+c
   vmap <C-c> "+yi
   vmap <C-x> "+c

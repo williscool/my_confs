@@ -43,3 +43,6 @@
 [submodule "vimfiles/bundle/tabman"]
 	path = vimfiles/bundle/tabman
 	url = git://github.com/kien/tabman.vim.git
+[submodule "vimfiles/bundle/vim-nginx"]
+	path = vimfiles/bundle/vim-nginx
+	url = git://github.com/evanmiller/nginx-vim-syntax.git
