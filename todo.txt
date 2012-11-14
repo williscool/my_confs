@@ -1,0 +1,4 @@
+add this
+http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
+
+for continious background ctag updates

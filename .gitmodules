@@ -43,3 +43,6 @@
 [submodule "vimfiles/bundle/tabman"]
 	path = vimfiles/bundle/tabman
 	url = git://github.com/kien/tabman.vim.git
+[submodule "vimfiles/bundle/ack-vim"]
+	path = vimfiles/bundle/ack-vim
+	url = git://github.com/mileszs/ack.vim.git
