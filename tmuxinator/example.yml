@@ -8,10 +8,10 @@ tabs:
   - tests: #empty for runnning tests
   - shell: git pull
   - database: rails db
-  - s: empty, will just run plain bash
-  - s: empty, will just run plain bash
-  - s: empty, will just run plain bash
-  - s: empty, will just run plain bash
+  - s: # empty, will just run plain bash
+  - s: # empty, will just run plain bash
+  - s: # empty, will just run plain bash
+  - s: # empty, will just run plain bash
   - logs: tail -f logs/server.log
   - console: pry
   - server: 
