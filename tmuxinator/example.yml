@@ -1,21 +1,26 @@
 # ~/.tmuxinator/example.yml
 # you can make as many tabs as you wish...
 
-project_name: Project_name
-project_root: ~/root_folder
-rvm: ruby-1.9.3-p194 
+project_name: Project Name
+project_root: ~/root_folder/of_project
+rvm: ruby-1.9.3-p194@gemset_name 
 tabs:
-  - tests: #empty for runnning tests
-  - shell: git pull
-  - database: rails db
-  - s: # empty, will just run plain bash
-  - s: # empty, will just run plain bash
-  - s: # empty, will just run plain bash
-  - s: # empty, will just run plain bash
-  - logs: tail -f logs/server.log
+<<<<<<< HEAD
+  - tests:
+      layout: main-vertical
+      panes:
+        - #empty just for running tests
+        - tail -f log/test.log
+  - shell: #empty main dev
+  - database: rails db # aka sudo -u postgres psql -d rails_comp_ppoets_development 
+  - s: #empty, will just run plain bash
+  - s: #empty, will just run plain bash
+  - s: #empty, will just run plain bash
+  - s: #empty, will just run plain bash
+  - logs: ##empty, will just run plain bash 
   - console: pry
   - server: 
       layout: even-vertical
       panes:
-        - torquebox run
+        - rails server
         - tail -f logs/development.log
