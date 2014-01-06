@@ -3,21 +3,20 @@ my vim confs and other such so I can get to them easily
 The files are kept unhidden (that is without dots in front of their names) to make them easier to find on the filesystem
 
 ## FIRST
-vim wont find the plugins properly if you dont put them where it can. i.e.
+vim wont find the plugins properly if you dont put them where it can. 
+also remember ALWAYS USE FULL PATH. symlinks almost never work correctly with relative paths.
+i.e.
 
-  `ln -s ~/repo/folder/name ~/.vim`
+  `ln -s full/path/to/repo/folder/name/vim /home/<user_name>/.vim`
 
 example:
-     `ln -s ~/my_confs/vimfiles/bundles ~/.vim/bundles`
+     `ln -s home/<user_name>/my_confs/vimfiles/bundles ~home/<user_name>/.vim/bundles`
       
 ## Installations
 
 to use a file: 
-  `ln -s a/file/in/this/repo/filename ~/proper/place/on/system/.filename`
+  `ln -s a/file/in/this/repo/filename /proper/place/on/system/.filename`
 
-example:
-    `ln -s vimrc ~/.vimrc`
-    `ln -s ~/my_confs/vimfiles/mvim /usr/local/bin/mvim`
 
 ###!WARNING
 
@@ -32,3 +31,6 @@ say if a person was kind enough to have their plugin in a git repo. since we are
     git submodule add git@github.com:flazz/vim-colorschemes.git vimfiles/bundle/colorschemes
 
 in the top level directory for instance and add that repo to the fun
+
+## updating current and newly aded submodules
+  `git submodule init && git submodule foreach git pull origin master`

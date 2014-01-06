@@ -23,9 +23,6 @@ set showcmd                     " display incomplete commands
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-"ruby path
-let g:ruby_path = "/Users/williamh/.rvm/rubies/jruby-1.6.7/bin/ruby"
-
 "ruby syntax
 au BufNewFile,BufRead *.html.erb set syntax=eruby
 
