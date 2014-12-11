@@ -33,4 +33,4 @@ say if a person was kind enough to have their plugin in a git repo. since we are
 in the top level directory for instance and add that repo to the fun
 
 ## updating current and newly aded submodules
-  `git submodule init && git submodule foreach git pull origin master`
+  `git submodule init && git submodule update && git submodule foreach git pull origin master`
