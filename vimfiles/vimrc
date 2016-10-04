@@ -3,7 +3,7 @@ set nocompatible                " choose no compatibility with legacy vi
 ""http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+execute pathogen#infect()
 call pathogen#helptags() " have pathogen update all help files  on load
 
 syntax enable
@@ -57,10 +57,7 @@ autocmd FileType css inoremap <buffer> : :;<Esc>i
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
-let g:ragtag_global_maps = 1 
-let g:ctrlp_extensions = ['tag']
-let g:ack_qhandler='CtrlPQuickfix'
-
+let g:ragtag_global_maps = 1
 
 " Get running OS
 function! GetRunningOS()
@@ -89,3 +86,30 @@ if os=="linux"
   "get rid of graphical icons for header menu and use much better text one
   se guioptions=agim
 endif
+
+
+" ctrl p stuff
+let g:ctrlp_extensions = ['tag']
+let g:ack_qhandler='CtrlPQuickfix'
+let g:ctrlp_max_files = 200000
+" make file search MUUUUUUUCH faster by only looking at tracked files in git
+" dirs
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux"
+
+" fzf
+set rtp+=~/.fzf
+
+"trailin whitespace
+" http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+
+"ag
+let g:ackprg = 'ag --vimgrep'
+cnoreabbrev Ack Ack!
