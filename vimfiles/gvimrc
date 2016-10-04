@@ -1,3 +1,5 @@
+" TODO: figure out how to make this NERDTreeFind not run when we got to a
+" help file. that shit has been annoying me for years
 au VimEnter,BufWinEnter * NERDTreeFind
 
 "colorscheme solarized
@@ -12,3 +14,6 @@ set guitablabel=%f
 
 nmap <C-Tab> :tabn<CR>
 nmap <C-S-Tab> :tabp<CR>
+
+se guioptions=agim
+se guioptions=-e

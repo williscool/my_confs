@@ -10,6 +10,11 @@ syntax enable
 filetype plugin indent on
 colorscheme desert
 
+" automatically read updates to files from the file system
+" http://stackoverflow.com/questions/2157914/can-vim-monitor-realtime-changes-to-a-file
+" you can also manually with :e!
+set autoread
+
 "" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
@@ -58,6 +63,8 @@ autocmd FileType css inoremap <buffer> : :;<Esc>i
 nnoremap <CR> :noh<CR><CR>
 
 let g:ragtag_global_maps = 1
+let g:ctrlp_extensions = ['tag']
+let g:ack_qhandler='CtrlPQuickfix'
 
 " Get running OS
 function! GetRunningOS()
@@ -87,7 +94,6 @@ if os=="linux"
   se guioptions=agim
 endif
 
-
 " ctrl p stuff
 let g:ctrlp_extensions = ['tag']
 let g:ack_qhandler='CtrlPQuickfix'
@@ -113,3 +119,11 @@ autocmd BufWinLeave * call clearmatches()
 "ag
 let g:ackprg = 'ag --vimgrep'
 cnoreabbrev Ack Ack!
+
+" mouse stuff
+set mouse=a
+set ttymouse=xterm2
+
+" http://vim.wikia.com/wiki/Alternative_tab_navigation
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
