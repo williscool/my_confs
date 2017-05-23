@@ -9,9 +9,6 @@ i.e.
 
   `ln -s full/path/to/repo/folder/name/vim /home/<user_name>/.vim`
 
-example:
-     `ln -s home/<user_name>/my_confs/vimfiles/bundles ~home/<user_name>/.vim/bundles`
-      
 ## Installations
 
 to use a file: 
