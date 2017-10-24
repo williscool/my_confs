@@ -1,0 +1,9 @@
+# Re-enable the ssh-dss (DSA) public key algorithm
+Host *
+	HostKeyAlgorithms +ssh-dss
+	PubkeyAcceptedKeyTypes=+ssh-dss
+
+Host *
+	IdentityFile 	%d/.ssh/%u_at_your_domain.com_ssh_key
+# UseKeychain yes
+	AddKeysToAgent yes
