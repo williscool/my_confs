@@ -127,3 +127,7 @@ set ttymouse=xterm2
 " http://vim.wikia.com/wiki/Alternative_tab_navigation
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
+
+" shut the damn bell of on bash on windows
+" https://stackoverflow.com/questions/36724209/disable-beep-of-linux-bash-on-windows-10
+set visualbell
