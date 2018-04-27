@@ -7,7 +7,7 @@ vim wont find the plugins properly if you dont put them where it can.
 also remember ALWAYS USE FULL PATH. symlinks almost never work correctly with relative paths.
 i.e.
 
-  `ln -s full/path/to/repo/folder/name/vim /home/<user_name>/.vim`
+  `ln -s full/path/to/repo/folder/name/bundle /home/<user_name>/.vim/bundle`
 
 ## Installations
 
