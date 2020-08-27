@@ -30,4 +30,5 @@ say if a person was kind enough to have their plugin in a git repo. since we are
 in the top level directory for instance and add that repo to the fun
 
 ## updating current and newly aded submodules
+  (8-27-2020): this is deprecated. I should remove the submodules in favor of subtrees
   `git submodule init && git submodule update && git submodule foreach git pull origin master`

@@ -1,3 +1,9 @@
+# Deprecated 8-27-2020
+
+I don't use this anymore I use tmux-resssurect.
+
+make sure to symlink you 
+
 until this https://github.com/aziz/tmuxinator/issues/50#issuecomment-8953509
 is patched
 
